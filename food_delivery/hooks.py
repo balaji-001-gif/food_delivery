@@ -31,11 +31,7 @@ fixtures = [
     {
         "dt": "Custom Field",
         "filters": [["module", "=", "Food Delivery"]]
-    }
-]
-
-# App Fixtures
-fixtures = [
+    },
     {
         "dt": "Workspace",
         "filters": [
@@ -43,6 +39,7 @@ fixtures = [
         ]
     }
 ]
+
 
 # Document Events
 doc_events = {
