@@ -1,0 +1,172 @@
+{
+ "creation": "2024-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "icon": "fa fa-motorcycle",
+ "is_standard": 1,
+ "label": "Food Delivery",
+ "modified": "2024-01-01 00:00:00.000000",
+ "module": "Food Delivery",
+ "name": "Food Delivery",
+ "owner": "Administrator",
+ "public": 1,
+ "title": "Food Delivery",
+ "app": "food_delivery",
+ "shortcuts": [
+  {
+   "docstatus": 0,
+   "icon": "fa fa-store",
+   "label": "Restaurants",
+   "link_to": "Restaurant",
+   "type": "DocType"
+  },
+  {
+   "docstatus": 0,
+   "icon": "fa fa-shopping-bag",
+   "label": "Orders",
+   "link_to": "Food Order",
+   "type": "DocType"
+  },
+  {
+   "docstatus": 0,
+   "icon": "fa fa-motorcycle",
+   "label": "Delivery Agents",
+   "link_to": "Delivery Agent",
+   "type": "DocType"
+  }
+ ],
+ "links": [
+  {
+   "docstatus": 0,
+   "label": "Masters",
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Restaurant",
+   "link_to": "Restaurant",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Menu Category",
+   "link_to": "Menu Category",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Menu Item",
+   "link_to": "Menu Item",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Delivery Zone",
+   "link_to": "Delivery Zone",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "docstatus": 0,
+   "label": "Operations",
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Food Order",
+   "link_to": "Food Order",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Delivery Agent",
+   "link_to": "Delivery Agent",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Payment Transaction",
+   "link_to": "Payment Transaction",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "docstatus": 0,
+   "label": "Settings",
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Coupon Code",
+   "link_to": "Coupon Code",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Customer Address",
+   "link_to": "Customer Address",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Restaurant Review",
+   "link_to": "Restaurant Review",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "docstatus": 0,
+   "label": "Reports & Insights",
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Daily Order Summary",
+   "link_to": "Daily Order Summary",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Restaurant Performance",
+   "link_to": "Restaurant Performance",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Delivery Agent Report",
+   "link_to": "Delivery Agent Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "docstatus": 0,
+   "label": "Dashboard",
+   "link_to": "food-delivery-dashboard",
+   "link_type": "Page",
+   "type": "Link"
+  }
+ ]
+}
