@@ -192,37 +192,41 @@ def create_coupon_codes():
     print("Creating Coupons...")
     coupons = [
         {
-            "coupon_code": "WELCOME50",
+            "code": "WELCOME50",
             "discount_type": "Percentage",
             "discount_value": 50,
             "minimum_order": 200,
             "max_discount": 100,
+            "valid_from": now_datetime(),
             "expiry_date": add_to_date(now_datetime(), days=30),
             "is_active": 1
         },
         {
-            "coupon_code": "FLAT100",
-            "discount_type": "Flat Amount",
+            "code": "FLAT100",
+            "discount_type": "Fixed Amount",
             "discount_value": 100,
             "minimum_order": 500,
+            "valid_from": now_datetime(),
             "expiry_date": add_to_date(now_datetime(), days=30),
             "is_active": 1
         }
     ]
     
     for c_data in coupons:
-        if not frappe.db.exists("Coupon Code", c_data["coupon_code"]):
+        if not frappe.db.exists("Coupon Code", c_data["code"]):
             doc = frappe.get_doc({
                 "doctype": "Coupon Code",
-                "coupon_code": c_data["coupon_code"],
+                "code": c_data["code"],
                 "discount_type": c_data["discount_type"],
                 "discount_value": c_data["discount_value"],
                 "minimum_order": c_data["minimum_order"],
                 "max_discount": c_data.get("max_discount", 0),
+                "valid_from": c_data["valid_from"],
                 "expiry_date": c_data["expiry_date"],
                 "is_active": c_data["is_active"]
             })
             doc.insert(ignore_permissions=True)
+
 
 def create_customers():
     print("Creating Customers...")
@@ -232,12 +236,11 @@ def create_customers():
     ]
     
     for c_data in customers:
-        if not frappe.db.exists("Customer", {"email_id": c_data["email_id"]}):
+        if not frappe.db.exists("Customer", {"customer_name": c_data["name"]}):
             doc = frappe.get_doc({
                 "doctype": "Customer",
                 "customer_name": c_data["name"],
-                "email_id": c_data["email_id"],
-                "mobile_no": c_data["mobile_no"]
+                "customer_type": "Individual"
             })
             doc.insert(ignore_permissions=True)
 
@@ -269,7 +272,7 @@ def create_orders():
         "payment_method": "UPI",
         "items": [
             {
-                "item_name": menu_items[0].name,
+                "menu_item": menu_items[0].name,
                 "quantity": 2,
                 "rate": 199,
                 "amount": 398
@@ -299,7 +302,7 @@ def create_orders():
                 "payment_method": "Online Payment",
                 "items": [
                     {
-                        "item_name": menu_items2[0].name,
+                        "menu_item": menu_items2[0].name,
                         "quantity": 1,
                         "rate": 250,
                         "amount": 250
@@ -308,3 +311,4 @@ def create_orders():
             })
             order2.insert(ignore_permissions=True)
             order2.submit()
+
