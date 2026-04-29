@@ -1,0 +1,361 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:restaurant_name",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "restaurant_name",
+        "column_break_1",
+        "status",
+        "section_break_basic",
+        "owner_name",
+        "phone",
+        "column_break_2",
+        "email",
+        "website",
+        "section_break_location",
+        "address_line1",
+        "address_line2",
+        "column_break_3",
+        "city",
+        "state",
+        "pincode",
+        "latitude",
+        "longitude",
+        "section_break_details",
+        "cuisine_type",
+        "description",
+        "column_break_4",
+        "logo",
+        "banner_image",
+        "section_break_timing",
+        "opening_time",
+        "closing_time",
+        "column_break_5",
+        "preparation_time",
+        "delivery_time",
+        "section_break_charges",
+        "minimum_order_amount",
+        "delivery_charge",
+        "column_break_6",
+        "free_delivery_above",
+        "tax_rate",
+        "section_break_rating",
+        "average_rating",
+        "total_reviews",
+        "column_break_7",
+        "total_orders",
+        "is_featured",
+        "section_break_bank",
+        "bank_account",
+        "account_holder",
+        "column_break_8",
+        "ifsc_code",
+        "upi_id"
+    ],
+    "fields": [
+        {
+            "fieldname": "restaurant_name",
+            "fieldtype": "Data",
+            "label": "Restaurant Name",
+            "reqd": 1,
+            "in_list_view": 1,
+            "in_global_search": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Active\nInactive\nTemporarily Closed\nPermanently Closed",
+            "default": "Active",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "section_break_basic",
+            "fieldtype": "Section Break",
+            "label": "Basic Information"
+        },
+        {
+            "fieldname": "owner_name",
+            "fieldtype": "Data",
+            "label": "Owner Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Phone",
+            "label": "Phone",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "website",
+            "fieldtype": "Data",
+            "label": "Website"
+        },
+        {
+            "fieldname": "section_break_location",
+            "fieldtype": "Section Break",
+            "label": "Location"
+        },
+        {
+            "fieldname": "address_line1",
+            "fieldtype": "Data",
+            "label": "Address Line 1",
+            "reqd": 1
+        },
+        {
+            "fieldname": "address_line2",
+            "fieldtype": "Data",
+            "label": "Address Line 2"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "label": "City",
+            "reqd": 1
+        },
+        {
+            "fieldname": "state",
+            "fieldtype": "Data",
+            "label": "State",
+            "reqd": 1
+        },
+        {
+            "fieldname": "pincode",
+            "fieldtype": "Data",
+            "label": "Pincode",
+            "reqd": 1
+        },
+        {
+            "fieldname": "latitude",
+            "fieldtype": "Float",
+            "label": "Latitude"
+        },
+        {
+            "fieldname": "longitude",
+            "fieldtype": "Float",
+            "label": "Longitude"
+        },
+        {
+            "fieldname": "section_break_details",
+            "fieldtype": "Section Break",
+            "label": "Restaurant Details"
+        },
+        {
+            "fieldname": "cuisine_type",
+            "fieldtype": "Data",
+            "label": "Cuisine Type"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "column_break_4",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "logo",
+            "fieldtype": "Attach Image",
+            "label": "Logo"
+        },
+        {
+            "fieldname": "banner_image",
+            "fieldtype": "Attach Image",
+            "label": "Banner Image"
+        },
+        {
+            "fieldname": "section_break_timing",
+            "fieldtype": "Section Break",
+            "label": "Timing & Delivery"
+        },
+        {
+            "fieldname": "opening_time",
+            "fieldtype": "Time",
+            "label": "Opening Time",
+            "reqd": 1
+        },
+        {
+            "fieldname": "closing_time",
+            "fieldtype": "Time",
+            "label": "Closing Time",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_5",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "preparation_time",
+            "fieldtype": "Int",
+            "label": "Preparation Time (mins)",
+            "default": "30"
+        },
+        {
+            "fieldname": "delivery_time",
+            "fieldtype": "Int",
+            "label": "Delivery Time (mins)",
+            "default": "30"
+        },
+        {
+            "fieldname": "section_break_charges",
+            "fieldtype": "Section Break",
+            "label": "Charges & Pricing"
+        },
+        {
+            "fieldname": "minimum_order_amount",
+            "fieldtype": "Currency",
+            "label": "Minimum Order Amount",
+            "default": "0"
+        },
+        {
+            "fieldname": "delivery_charge",
+            "fieldtype": "Currency",
+            "label": "Delivery Charge",
+            "default": "0"
+        },
+        {
+            "fieldname": "column_break_6",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "free_delivery_above",
+            "fieldtype": "Currency",
+            "label": "Free Delivery Above"
+        },
+        {
+            "fieldname": "tax_rate",
+            "fieldtype": "Percent",
+            "label": "Tax Rate (%)",
+            "default": "5"
+        },
+        {
+            "fieldname": "section_break_rating",
+            "fieldtype": "Section Break",
+            "label": "Ratings & Stats"
+        },
+        {
+            "fieldname": "average_rating",
+            "fieldtype": "Float",
+            "label": "Average Rating",
+            "read_only": 1,
+            "default": "0"
+        },
+        {
+            "fieldname": "total_reviews",
+            "fieldtype": "Int",
+            "label": "Total Reviews",
+            "read_only": 1,
+            "default": "0"
+        },
+        {
+            "fieldname": "column_break_7",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "total_orders",
+            "fieldtype": "Int",
+            "label": "Total Orders",
+            "read_only": 1,
+            "default": "0"
+        },
+        {
+            "fieldname": "is_featured",
+            "fieldtype": "Check",
+            "label": "Featured Restaurant",
+            "default": "0"
+        },
+        {
+            "fieldname": "section_break_bank",
+            "fieldtype": "Section Break",
+            "label": "Bank Details"
+        },
+        {
+            "fieldname": "bank_account",
+            "fieldtype": "Data",
+            "label": "Bank Account Number"
+        },
+        {
+            "fieldname": "account_holder",
+            "fieldtype": "Data",
+            "label": "Account Holder Name"
+        },
+        {
+            "fieldname": "column_break_8",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "ifsc_code",
+            "fieldtype": "Data",
+            "label": "IFSC Code"
+        },
+        {
+            "fieldname": "upi_id",
+            "fieldtype": "Data",
+            "label": "UPI ID"
+        }
+    ],
+    "is_submittable": 0,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Food Delivery",
+    "name": "Restaurant",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Restaurant Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Customer"
+        }
+    ],
+    "search_fields": "restaurant_name,city,cuisine_type",
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "title_field": "restaurant_name",
+    "track_changes": 1
+}

@@ -1,0 +1,97 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:category_name",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "category_name",
+        "column_break_1",
+        "restaurant",
+        "section_break_1",
+        "description",
+        "column_break_2",
+        "image",
+        "is_active",
+        "sort_order"
+    ],
+    "fields": [
+        {
+            "fieldname": "category_name",
+            "fieldtype": "Data",
+            "label": "Category Name",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "restaurant",
+            "fieldtype": "Link",
+            "label": "Restaurant",
+            "options": "Restaurant",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Small Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "image",
+            "fieldtype": "Attach Image",
+            "label": "Category Image"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "label": "Is Active",
+            "default": "1"
+        },
+        {
+            "fieldname": "sort_order",
+            "fieldtype": "Int",
+            "label": "Sort Order",
+            "default": "0"
+        }
+    ],
+    "is_submittable": 0,
+    "module": "Food Delivery",
+    "name": "Menu Category",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "Restaurant Manager",
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Customer"
+        }
+    ],
+    "title_field": "category_name",
+    "track_changes": 1
+}

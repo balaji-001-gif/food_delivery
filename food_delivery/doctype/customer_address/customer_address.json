@@ -1,0 +1,137 @@
+{
+    "actions": [],
+    "autoname": "naming_series:",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "customer",
+        "column_break_1",
+        "address_type",
+        "is_default",
+        "section_break_1",
+        "address_line1",
+        "address_line2",
+        "column_break_2",
+        "city",
+        "state",
+        "pincode",
+        "section_break_2",
+        "landmark",
+        "latitude",
+        "longitude"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "ADDR-.####"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "address_type",
+            "fieldtype": "Select",
+            "label": "Address Type",
+            "options": "Home\nWork\nOther",
+            "default": "Home",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "is_default",
+            "fieldtype": "Check",
+            "label": "Default Address",
+            "default": "0"
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "address_line1",
+            "fieldtype": "Data",
+            "label": "Address Line 1",
+            "reqd": 1
+        },
+        {
+            "fieldname": "address_line2",
+            "fieldtype": "Data",
+            "label": "Address Line 2"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "label": "City",
+            "reqd": 1
+        },
+        {
+            "fieldname": "state",
+            "fieldtype": "Data",
+            "label": "State",
+            "reqd": 1
+        },
+        {
+            "fieldname": "pincode",
+            "fieldtype": "Data",
+            "label": "Pincode",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_2",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "landmark",
+            "fieldtype": "Data",
+            "label": "Landmark"
+        },
+        {
+            "fieldname": "latitude",
+            "fieldtype": "Float",
+            "label": "Latitude"
+        },
+        {
+            "fieldname": "longitude",
+            "fieldtype": "Float",
+            "label": "Longitude"
+        }
+    ],
+    "is_submittable": 0,
+    "module": "Food Delivery",
+    "name": "Customer Address",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "Customer",
+            "write": 1
+        }
+    ],
+    "title_field": "address_type"
+}

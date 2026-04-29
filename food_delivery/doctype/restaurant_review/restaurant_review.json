@@ -1,0 +1,126 @@
+{
+    "actions": [],
+    "autoname": "naming_series:",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "restaurant",
+        "column_break_1",
+        "customer",
+        "customer_name",
+        "section_break_1",
+        "order",
+        "rating",
+        "column_break_2",
+        "food_rating",
+        "delivery_rating",
+        "section_break_2",
+        "review_text",
+        "images"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "REV-.####"
+        },
+        {
+            "fieldname": "restaurant",
+            "fieldtype": "Link",
+            "label": "Restaurant",
+            "options": "Restaurant",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break",
+            "label": "Review Details"
+        },
+        {
+            "fieldname": "order",
+            "fieldtype": "Link",
+            "label": "Order",
+            "options": "Food Order"
+        },
+        {
+            "fieldname": "rating",
+            "fieldtype": "Rating",
+            "label": "Overall Rating",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "food_rating",
+            "fieldtype": "Rating",
+            "label": "Food Rating"
+        },
+        {
+            "fieldname": "delivery_rating",
+            "fieldtype": "Rating",
+            "label": "Delivery Rating"
+        },
+        {
+            "fieldname": "section_break_2",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "review_text",
+            "fieldtype": "Text",
+            "label": "Review"
+        },
+        {
+            "fieldname": "images",
+            "fieldtype": "Attach",
+            "label": "Images"
+        }
+    ],
+    "is_submittable": 0,
+    "module": "Food Delivery",
+    "name": "Restaurant Review",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "read": 1,
+            "role": "Customer"
+        }
+    ],
+    "title_field": "restaurant",
+    "track_changes": 1
+}

@@ -1,0 +1,13 @@
+include LICENSE
+include README.md
+recursive-include food_delivery *.py
+recursive-include food_delivery *.html
+recursive-include food_delivery *.js
+recursive-include food_delivery *.css
+recursive-include food_delivery *.png
+recursive-include food_delivery *.jpg
+recursive-include food_delivery *.svg
+recursive-include food_delivery *.json
+recursive-include food_delivery *.txt
+recursive-include food_delivery *.csv
+recursive-include food_delivery *.md

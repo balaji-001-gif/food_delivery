@@ -1,0 +1,348 @@
+{
+    "actions": [],
+    "allow_cancel": 1,
+    "autoname": "naming_series:",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "customer",
+        "customer_name",
+        "column_break_1",
+        "restaurant",
+        "restaurant_name_display",
+        "order_date",
+        "section_break_status",
+        "order_status",
+        "payment_status",
+        "column_break_2",
+        "delivery_agent",
+        "estimated_delivery_time",
+        "actual_delivery_time",
+        "section_break_address",
+        "delivery_address",
+        "delivery_latitude",
+        "delivery_longitude",
+        "column_break_3",
+        "delivery_instructions",
+        "contact_number",
+        "section_break_items",
+        "items",
+        "section_break_pricing",
+        "subtotal",
+        "delivery_charge",
+        "column_break_4",
+        "discount_amount",
+        "tax_amount",
+        "total_amount",
+        "section_break_coupon",
+        "coupon_code",
+        "coupon_discount",
+        "column_break_5",
+        "payment_method",
+        "transaction_id",
+        "section_break_notes",
+        "special_instructions",
+        "cancellation_reason",
+        "column_break_6",
+        "rating",
+        "review"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "ORD-.YYYY.-.MM.-.DD.-.####",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1,
+            "in_list_view": 1,
+            "search_index": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "restaurant",
+            "fieldtype": "Link",
+            "label": "Restaurant",
+            "options": "Restaurant",
+            "reqd": 1,
+            "in_list_view": 1,
+            "search_index": 1
+        },
+        {
+            "fieldname": "restaurant_name_display",
+            "fieldtype": "Data",
+            "label": "Restaurant Name",
+            "fetch_from": "restaurant.restaurant_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "order_date",
+            "fieldtype": "Datetime",
+            "label": "Order Date",
+            "default": "now",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "section_break_status",
+            "fieldtype": "Section Break",
+            "label": "Order Status"
+        },
+        {
+            "fieldname": "order_status",
+            "fieldtype": "Select",
+            "label": "Order Status",
+            "options": "Pending\nConfirmed\nPreparing\nReady for Pickup\nOut for Delivery\nDelivered\nCancelled",
+            "default": "Pending",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "payment_status",
+            "fieldtype": "Select",
+            "label": "Payment Status",
+            "options": "Pending\nPaid\nFailed\nRefunded",
+            "default": "Pending",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "delivery_agent",
+            "fieldtype": "Link",
+            "label": "Delivery Agent",
+            "options": "Delivery Agent"
+        },
+        {
+            "fieldname": "estimated_delivery_time",
+            "fieldtype": "Datetime",
+            "label": "Estimated Delivery Time"
+        },
+        {
+            "fieldname": "actual_delivery_time",
+            "fieldtype": "Datetime",
+            "label": "Actual Delivery Time"
+        },
+        {
+            "fieldname": "section_break_address",
+            "fieldtype": "Section Break",
+            "label": "Delivery Details"
+        },
+        {
+            "fieldname": "delivery_address",
+            "fieldtype": "Text",
+            "label": "Delivery Address",
+            "reqd": 1
+        },
+        {
+            "fieldname": "delivery_latitude",
+            "fieldtype": "Float",
+            "label": "Latitude"
+        },
+        {
+            "fieldname": "delivery_longitude",
+            "fieldtype": "Float",
+            "label": "Longitude"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "delivery_instructions",
+            "fieldtype": "Small Text",
+            "label": "Delivery Instructions"
+        },
+        {
+            "fieldname": "contact_number",
+            "fieldtype": "Phone",
+            "label": "Contact Number",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_items",
+            "fieldtype": "Section Break",
+            "label": "Order Items"
+        },
+        {
+            "fieldname": "items",
+            "fieldtype": "Table",
+            "label": "Items",
+            "options": "Food Order Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_pricing",
+            "fieldtype": "Section Break",
+            "label": "Pricing"
+        },
+        {
+            "fieldname": "subtotal",
+            "fieldtype": "Currency",
+            "label": "Subtotal",
+            "read_only": 1
+        },
+        {
+            "fieldname": "delivery_charge",
+            "fieldtype": "Currency",
+            "label": "Delivery Charge",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_4",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "discount_amount",
+            "fieldtype": "Currency",
+            "label": "Discount Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "tax_amount",
+            "fieldtype": "Currency",
+            "label": "Tax Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "read_only": 1,
+            "in_list_view": 1,
+            "bold": 1
+        },
+        {
+            "fieldname": "section_break_coupon",
+            "fieldtype": "Section Break",
+            "label": "Payment"
+        },
+        {
+            "fieldname": "coupon_code",
+            "fieldtype": "Link",
+            "label": "Coupon Code",
+            "options": "Coupon Code"
+        },
+        {
+            "fieldname": "coupon_discount",
+            "fieldtype": "Currency",
+            "label": "Coupon Discount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_5",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "payment_method",
+            "fieldtype": "Select",
+            "label": "Payment Method",
+            "options": "Cash on Delivery\nOnline Payment\nWallet\nUPI",
+            "default": "Cash on Delivery"
+        },
+        {
+            "fieldname": "transaction_id",
+            "fieldtype": "Data",
+            "label": "Transaction ID"
+        },
+        {
+            "fieldname": "section_break_notes",
+            "fieldtype": "Section Break",
+            "label": "Notes & Review"
+        },
+        {
+            "fieldname": "special_instructions",
+            "fieldtype": "Text",
+            "label": "Special Instructions"
+        },
+        {
+            "fieldname": "cancellation_reason",
+            "fieldtype": "Text",
+            "label": "Cancellation Reason"
+        },
+        {
+            "fieldname": "column_break_6",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "rating",
+            "fieldtype": "Rating",
+            "label": "Rating"
+        },
+        {
+            "fieldname": "review",
+            "fieldtype": "Text",
+            "label": "Review"
+        }
+    ],
+    "is_submittable": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Food Delivery",
+    "name": "Food Order",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "amend": 1,
+            "cancel": 1,
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "submit": 1,
+            "write": 1
+        },
+        {
+            "cancel": 1,
+            "create": 1,
+            "email": 1,
+            "print": 1,
+            "read": 1,
+            "role": "Restaurant Manager",
+            "write": 1
+        },
+        {
+            "cancel": 1,
+            "create": 1,
+            "read": 1,
+            "role": "Customer",
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Delivery Agent",
+            "write": 1
+        }
+    ],
+    "sort_field": "order_date",
+    "sort_order": "DESC",
+    "title_field": "customer_name",
+    "track_changes": 1
+}

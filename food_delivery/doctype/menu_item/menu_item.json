@@ -1,0 +1,197 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "naming_series:",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "naming_series",
+        "item_name",
+        "column_break_1",
+        "restaurant",
+        "category",
+        "section_break_1",
+        "price",
+        "discounted_price",
+        "column_break_2",
+        "is_veg",
+        "is_available",
+        "is_bestseller",
+        "section_break_2",
+        "description",
+        "column_break_3",
+        "image",
+        "section_break_3",
+        "preparation_time",
+        "calories",
+        "column_break_4",
+        "allergens",
+        "ingredients",
+        "section_break_addon",
+        "addons"
+    ],
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "MENU-.####"
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "label": "Item Name",
+            "reqd": 1,
+            "in_list_view": 1,
+            "in_global_search": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "restaurant",
+            "fieldtype": "Link",
+            "label": "Restaurant",
+            "options": "Restaurant",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "category",
+            "fieldtype": "Link",
+            "label": "Category",
+            "options": "Menu Category",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "section_break_1",
+            "fieldtype": "Section Break",
+            "label": "Pricing"
+        },
+        {
+            "fieldname": "price",
+            "fieldtype": "Currency",
+            "label": "Price",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "discounted_price",
+            "fieldtype": "Currency",
+            "label": "Discounted Price"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "is_veg",
+            "fieldtype": "Check",
+            "label": "Is Vegetarian",
+            "default": "1"
+        },
+        {
+            "fieldname": "is_available",
+            "fieldtype": "Check",
+            "label": "Is Available",
+            "default": "1"
+        },
+        {
+            "fieldname": "is_bestseller",
+            "fieldtype": "Check",
+            "label": "Bestseller",
+            "default": "0"
+        },
+        {
+            "fieldname": "section_break_2",
+            "fieldtype": "Section Break",
+            "label": "Details"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "image",
+            "fieldtype": "Attach Image",
+            "label": "Item Image"
+        },
+        {
+            "fieldname": "section_break_3",
+            "fieldtype": "Section Break",
+            "label": "Nutrition & Info"
+        },
+        {
+            "fieldname": "preparation_time",
+            "fieldtype": "Int",
+            "label": "Preparation Time (mins)",
+            "default": "15"
+        },
+        {
+            "fieldname": "calories",
+            "fieldtype": "Int",
+            "label": "Calories (kcal)"
+        },
+        {
+            "fieldname": "column_break_4",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "allergens",
+            "fieldtype": "Data",
+            "label": "Allergens"
+        },
+        {
+            "fieldname": "ingredients",
+            "fieldtype": "Text",
+            "label": "Ingredients"
+        },
+        {
+            "fieldname": "section_break_addon",
+            "fieldtype": "Section Break",
+            "label": "Add-ons & Customization"
+        },
+        {
+            "fieldname": "addons",
+            "fieldtype": "Table",
+            "label": "Add-ons",
+            "options": "Menu Item Addon"
+        }
+    ],
+    "is_submittable": 0,
+    "module": "Food Delivery",
+    "name": "Menu Item",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "System Manager",
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "read": 1,
+            "role": "Restaurant Manager",
+            "write": 1
+        },
+        {
+            "read": 1,
+            "role": "Customer"
+        }
+    ],
+    "search_fields": "item_name,restaurant,category",
+    "title_field": "item_name",
+    "track_changes": 1
+}

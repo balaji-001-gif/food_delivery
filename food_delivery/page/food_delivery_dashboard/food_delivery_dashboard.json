@@ -1,0 +1,15 @@
+{
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "Page",
+    "icon": "fa fa-motorcycle",
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Food Delivery",
+    "name": "food-delivery-dashboard",
+    "page_name": "food-delivery-dashboard",
+    "roles": [
+        {"role": "System Manager"},
+        {"role": "Restaurant Manager"}
+    ],
+    "system_page": 0,
+    "title": "Food Delivery Dashboard"
+}
