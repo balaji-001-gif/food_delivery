@@ -125,9 +125,10 @@ def create_restaurants():
             
             # Create Categories and Items
             for m_item in r_data["menu"]:
-                if not frappe.db.exists("Menu Category", m_item["category"]):
+                if not frappe.db.exists("Menu Category", {"category_name": m_item["category"], "restaurant": r_doc.name}):
                     c_doc = frappe.get_doc({
                         "doctype": "Menu Category",
+                        "restaurant": r_doc.name,
                         "category_name": m_item["category"]
                     })
                     c_doc.insert(ignore_permissions=True)
