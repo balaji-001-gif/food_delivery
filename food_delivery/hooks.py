@@ -34,6 +34,16 @@ fixtures = [
     }
 ]
 
+# App Fixtures
+fixtures = [
+    {
+        "dt": "Workspace",
+        "filters": [
+            ["name", "in", ["Food Delivery"]]
+        ]
+    }
+]
+
 # Document Events
 doc_events = {
     "Food Order": {
