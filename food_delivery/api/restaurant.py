@@ -49,7 +49,7 @@ def get_restaurants(city=None, cuisine=None, sort_by="rating", page=1, page_size
 @frappe.whitelist(allow_guest=True)
 def get_restaurant_menu(restaurant_name):
     """Get complete restaurant menu"""
-    from food_delivery.doctype.restaurant.restaurant import get_restaurant_details
+    from food_delivery.food_delivery.doctype.restaurant.restaurant import get_restaurant_details
     return get_restaurant_details(restaurant_name)
 
 

@@ -93,7 +93,7 @@ def get_nearby_restaurants(latitude, longitude, radius=5, cuisine=None):
     )
     
     if latitude and longitude:
-        from food_delivery.utils.helpers import calculate_distance
+        from food_delivery.food_delivery.utils.helpers import calculate_distance
         for restaurant in restaurants:
             if restaurant.latitude and restaurant.longitude:
                 distance = calculate_distance(
