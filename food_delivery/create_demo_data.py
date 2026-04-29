@@ -24,12 +24,20 @@ def run():
 
 def create_zones():
     print("Creating Delivery Zones...")
-    zones = ["Central Zone", "North Zone", "South Zone", "West Zone", "East Zone"]
+    zones = [
+        {"zone_name": "Central Zone", "city": "Chennai", "state": "Tamil Nadu"},
+        {"zone_name": "North Zone", "city": "Chennai", "state": "Tamil Nadu"},
+        {"zone_name": "South Zone", "city": "Chennai", "state": "Tamil Nadu"},
+        {"zone_name": "West Zone", "city": "Chennai", "state": "Tamil Nadu"},
+        {"zone_name": "East Zone", "city": "Chennai", "state": "Tamil Nadu"}
+    ]
     for z in zones:
-        if not frappe.db.exists("Delivery Zone", z):
+        if not frappe.db.exists("Delivery Zone", z["zone_name"]):
             doc = frappe.get_doc({
                 "doctype": "Delivery Zone",
-                "zone_name": z,
+                "zone_name": z["zone_name"],
+                "city": z["city"],
+                "state": z["state"],
                 "is_active": 1
             })
             doc.insert(ignore_permissions=True)
@@ -39,9 +47,15 @@ def create_restaurants():
     restaurants = [
         {
             "restaurant_name": "Pizza Palace",
+            "owner_name": "John Doe",
             "email": "pizza@palace.com",
             "phone": "9876543210",
-            "address": "123 Main St, Central Zone",
+            "address_line1": "123 Main St",
+            "city": "Chennai",
+            "state": "Tamil Nadu",
+            "pincode": "600001",
+            "opening_time": "10:00:00",
+            "closing_time": "23:00:00",
             "status": "Active",
             "latitude": 13.0827,
             "longitude": 80.2707,
@@ -59,9 +73,15 @@ def create_restaurants():
         },
         {
             "restaurant_name": "Burger Barn",
+            "owner_name": "Jane Smith",
             "email": "contact@burgerbarn.com",
             "phone": "9876543211",
-            "address": "45 Park Ave, South Zone",
+            "address_line1": "45 Park Ave",
+            "city": "Chennai",
+            "state": "Tamil Nadu",
+            "pincode": "600002",
+            "opening_time": "11:00:00",
+            "closing_time": "22:00:00",
             "status": "Active",
             "latitude": 13.0012,
             "longitude": 80.2565,
@@ -83,9 +103,15 @@ def create_restaurants():
             r_doc = frappe.get_doc({
                 "doctype": "Restaurant",
                 "restaurant_name": r_data["restaurant_name"],
+                "owner_name": r_data["owner_name"],
                 "email": r_data["email"],
                 "phone": r_data["phone"],
-                "address": r_data["address"],
+                "address_line1": r_data["address_line1"],
+                "city": r_data["city"],
+                "state": r_data["state"],
+                "pincode": r_data["pincode"],
+                "opening_time": r_data["opening_time"],
+                "closing_time": r_data["closing_time"],
                 "status": r_data["status"],
                 "latitude": r_data["latitude"],
                 "longitude": r_data["longitude"],
@@ -122,15 +148,17 @@ def create_agents():
     print("Creating Delivery Agents...")
     agents = [
         {
+            "naming_series": "DA-.####",
             "agent_name": "Ravi Kumar",
             "phone": "9876543220",
             "email": "ravi@frappe.com",
             "status": "Available",
-            "vehicle_type": "Bike",
+            "vehicle_type": "Motorcycle",
             "vehicle_number": "TN01AB1234",
             "assigned_zone": "Central Zone"
         },
         {
+            "naming_series": "DA-.####",
             "agent_name": "Amit Singh",
             "phone": "9876543221",
             "email": "amit@frappe.com",
@@ -145,6 +173,7 @@ def create_agents():
         if not frappe.db.exists("Delivery Agent", {"phone": a_data["phone"]}):
             doc = frappe.get_doc({
                 "doctype": "Delivery Agent",
+                "naming_series": a_data["naming_series"],
                 "agent_name": a_data["agent_name"],
                 "phone": a_data["phone"],
                 "email": a_data["email"],
@@ -154,6 +183,7 @@ def create_agents():
                 "assigned_zone": a_data["assigned_zone"]
             })
             doc.insert(ignore_permissions=True)
+
 
 def create_coupon_codes():
     print("Creating Coupons...")
