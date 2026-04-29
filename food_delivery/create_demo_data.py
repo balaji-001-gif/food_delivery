@@ -136,10 +136,11 @@ def create_restaurants():
                 if not frappe.db.exists("Menu Item", {"item_name": m_item["item_name"], "restaurant": r_doc.name}):
                     i_doc = frappe.get_doc({
                         "doctype": "Menu Item",
+                        "naming_series": "MENU-.####",
                         "restaurant": r_doc.name,
                         "category": m_item["category"],
                         "item_name": m_item["item_name"],
-                        "rate": m_item["rate"],
+                        "price": m_item["rate"],
                         "is_veg": m_item["is_veg"],
                         "is_available": 1
                     })
