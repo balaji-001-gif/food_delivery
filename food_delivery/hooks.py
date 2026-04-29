@@ -37,12 +37,12 @@ fixtures = [
 # Document Events
 doc_events = {
     "Food Order": {
-        "on_submit": "food_delivery.food_delivery.doctype.food_order.food_order.on_submit",
-        "on_cancel": "food_delivery.food_delivery.doctype.food_order.food_order.on_cancel",
-        "after_insert": "food_delivery.food_delivery.doctype.food_order.food_order.after_insert",
+        "on_submit": "food_delivery.doctype.food_order.food_order.on_submit",
+        "on_cancel": "food_delivery.doctype.food_order.food_order.on_cancel",
+        "after_insert": "food_delivery.doctype.food_order.food_order.after_insert",
     },
     "Payment Transaction": {
-        "on_submit": "food_delivery.food_delivery.doctype.payment_transaction.payment_transaction.on_submit",
+        "on_submit": "food_delivery.doctype.payment_transaction.payment_transaction.on_submit",
     }
 }
 
@@ -50,17 +50,17 @@ doc_events = {
 scheduler_events = {
     "cron": {
         "*/5 * * * *": [
-            "food_delivery.food_delivery.doctype.food_order.food_order.update_order_status",
+            "food_delivery.doctype.food_order.food_order.update_order_status",
         ],
         "0 0 * * *": [
-            "food_delivery.food_delivery.doctype.restaurant.restaurant.reset_daily_stats",
+            "food_delivery.doctype.restaurant.restaurant.reset_daily_stats",
         ],
     },
     "daily": [
-        "food_delivery.food_delivery.doctype.coupon_code.coupon_code.expire_coupons",
+        "food_delivery.doctype.coupon_code.coupon_code.expire_coupons",
     ],
     "hourly": [
-        "food_delivery.food_delivery.doctype.delivery_agent.delivery_agent.update_agent_status",
+        "food_delivery.doctype.delivery_agent.delivery_agent.update_agent_status",
     ]
 }
 
@@ -73,21 +73,22 @@ website_route_rules = [
 
 # Permissions
 permission_query_conditions = {
-    "Food Order": "food_delivery.food_delivery.doctype.food_order.food_order.get_permission_query_conditions",
-    "Restaurant": "food_delivery.food_delivery.doctype.restaurant.restaurant.get_permission_query_conditions",
+    "Food Order": "food_delivery.doctype.food_order.food_order.get_permission_query_conditions",
+    "Restaurant": "food_delivery.doctype.restaurant.restaurant.get_permission_query_conditions",
 }
 
 has_permission = {
-    "Food Order": "food_delivery.food_delivery.doctype.food_order.food_order.has_permission",
+    "Food Order": "food_delivery.doctype.food_order.food_order.has_permission",
 }
 
 # On Login
-on_login = "food_delivery.food_delivery.api.customer.on_login"
+on_login = "food_delivery.api.customer.on_login"
 
 # Jinja Environments
 jinja = {
     "methods": [
-        "food_delivery.food_delivery.utils.helpers.format_currency",
-        "food_delivery.food_delivery.utils.helpers.get_rating_stars",
+        "food_delivery.utils.helpers.format_currency",
+        "food_delivery.utils.helpers.get_rating_stars",
     ]
 }
+

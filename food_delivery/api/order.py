@@ -21,7 +21,7 @@ def create_order(order_data):
     
     order_data["customer"] = customer
     
-    from food_delivery.food_delivery.doctype.food_order.food_order import place_order
+    from food_delivery.doctype.food_order.food_order import place_order
     return place_order(order_data)
 
 
@@ -141,5 +141,5 @@ def reorder(order_name):
         "items": items
     }
     
-    from food_delivery.food_delivery.doctype.food_order.food_order import place_order
+    from food_delivery.doctype.food_order.food_order import place_order
     return place_order(order_data)

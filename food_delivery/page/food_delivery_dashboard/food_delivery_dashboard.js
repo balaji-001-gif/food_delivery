@@ -7,7 +7,7 @@ frappe.pages['food-delivery-dashboard'].on_page_load = function(wrapper) {
 
 	// Load data
 	frappe.call({
-		method: 'food_delivery.food_delivery.page.food_delivery_dashboard.food_delivery_dashboard.get_dashboard_data',
+		method: 'food_delivery.page.food_delivery_dashboard.food_delivery_dashboard.get_dashboard_data',
 		callback: function(r) {
 			if (r.message) {
 				render_dashboard(page, r.message);
