@@ -11,7 +11,6 @@ app_include_css = [
     "/assets/food_delivery/css/food_delivery.css",
     "/assets/food_delivery/css/dashboard.css"
 ]
-
 app_include_js = [
     "/assets/food_delivery/js/food_delivery.js"
 ]
@@ -20,7 +19,6 @@ app_include_js = [
 web_include_css = [
     "/assets/food_delivery/css/web_food_delivery.css"
 ]
-
 web_include_js = [
     "/assets/food_delivery/js/web_food_delivery.js"
 ]
@@ -76,7 +74,6 @@ permission_query_conditions = {
     "Food Order": "food_delivery.food_delivery.doctype.food_order.food_order.get_permission_query_conditions",
     "Restaurant": "food_delivery.food_delivery.doctype.restaurant.restaurant.get_permission_query_conditions",
 }
-
 has_permission = {
     "Food Order": "food_delivery.food_delivery.doctype.food_order.food_order.has_permission",
 }
@@ -91,5 +88,3 @@ jinja = {
         "food_delivery.food_delivery.utils.helpers.get_rating_stars",
     ]
 }
-
-
