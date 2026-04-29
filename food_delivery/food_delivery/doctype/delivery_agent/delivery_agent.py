@@ -99,3 +99,10 @@ def update_agent_status():
         AND TIMESTAMPDIFF(HOUR, last_location_update, NOW()) >= 1
     """)
     frappe.db.commit()
+
+
+@frappe.whitelist()
+def generate_agent_performance_report():
+    """Generate agent performance report (Scheduled Task placeholder)"""
+    pass
+

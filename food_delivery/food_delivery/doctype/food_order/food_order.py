@@ -372,3 +372,10 @@ def has_permission(doc, ptype, user):
         return True
     
     return None
+
+
+@frappe.whitelist()
+def send_daily_order_summary():
+    """Send daily order summary (Scheduled Task placeholder)"""
+    pass
+

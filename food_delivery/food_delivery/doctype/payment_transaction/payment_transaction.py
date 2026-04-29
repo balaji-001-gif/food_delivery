@@ -22,3 +22,10 @@ class PaymentTransaction(Document):
             frappe.db.set_value("Food Order", self.order, "payment_status", "Refunded")
         
         frappe.db.commit()
+
+
+@frappe.whitelist()
+def generate_monthly_revenue_report():
+    """Generate monthly revenue report (Scheduled Task placeholder)"""
+    pass
+
