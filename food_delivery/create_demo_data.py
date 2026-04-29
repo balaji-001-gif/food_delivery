@@ -49,7 +49,7 @@ def create_restaurants():
             "restaurant_name": "Pizza Palace",
             "owner_name": "John Doe",
             "email": "pizza@palace.com",
-            "phone": "9876543210",
+            "phone": "+919876543210",
             "address_line1": "123 Main St",
             "city": "Chennai",
             "state": "Tamil Nadu",
@@ -75,7 +75,7 @@ def create_restaurants():
             "restaurant_name": "Burger Barn",
             "owner_name": "Jane Smith",
             "email": "contact@burgerbarn.com",
-            "phone": "9876543211",
+            "phone": "+919876543211",
             "address_line1": "45 Park Ave",
             "city": "Chennai",
             "state": "Tamil Nadu",
@@ -150,7 +150,7 @@ def create_agents():
         {
             "naming_series": "DA-.####",
             "agent_name": "Ravi Kumar",
-            "phone": "9876543220",
+            "phone": "+919876543220",
             "email": "ravi@frappe.com",
             "status": "Available",
             "vehicle_type": "Motorcycle",
@@ -160,7 +160,7 @@ def create_agents():
         {
             "naming_series": "DA-.####",
             "agent_name": "Amit Singh",
-            "phone": "9876543221",
+            "phone": "+919876543221",
             "email": "amit@frappe.com",
             "status": "Available",
             "vehicle_type": "Scooter",
@@ -224,8 +224,8 @@ def create_coupon_codes():
 def create_customers():
     print("Creating Customers...")
     customers = [
-        {"name": "Balaji", "email_id": "balaji@example.com", "mobile_no": "9999999999"},
-        {"name": "Guest User", "email_id": "guest@example.com", "mobile_no": "8888888888"}
+        {"name": "Balaji", "email_id": "balaji@example.com", "mobile_no": "+919999999999"},
+        {"name": "Guest User", "email_id": "guest@example.com", "mobile_no": "+918888888888"}
     ]
     
     for c_data in customers:
@@ -262,7 +262,7 @@ def create_orders():
         "order_status": "Pending",
         "payment_status": "Pending",
         "delivery_address": "Apt 101, Central Plaza, Central Zone",
-        "contact_number": "9999999999",
+        "contact_number": "+919999999999",
         "payment_method": "UPI",
         "items": [
             {
@@ -292,7 +292,7 @@ def create_orders():
                 "payment_status": "Paid",
                 "delivery_agent": agents[0],
                 "delivery_address": "12 Sector C, South Zone",
-                "contact_number": "9999999999",
+                "contact_number": "+919999999999",
                 "payment_method": "Online Payment",
                 "items": [
                     {
