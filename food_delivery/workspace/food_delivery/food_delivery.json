@@ -1,172 +1,57 @@
 {
- "creation": "2024-01-01 00:00:00.000000",
- "docstatus": 0,
  "doctype": "Workspace",
- "icon": "fa fa-motorcycle",
- "is_standard": 1,
- "label": "Food Delivery",
- "modified": "2024-01-01 00:00:00.000000",
- "module": "Food Delivery",
  "name": "Food Delivery",
- "owner": "Administrator",
- "public": 1,
+ "label": "Food Delivery",
  "title": "Food Delivery",
- "app": "food_delivery",
+ "icon": "fa fa-motorcycle",
+ "module": "Food Delivery",
+ "public": 1,
+ "is_standard": 1,
+ "is_hidden": 0,
+ "is_default": 0,
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "hide_custom": 0,
+ "restrict_to_domain": "",
+ "for_user": "",
+ "sequence_id": 1,
+ "creation": "2024-01-01 00:00:00.000000",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0,
+ "charts": [],
+ "roles": [],
+ "content": "[{\"id\": \"cb-masters\", \"type\": \"card\", \"data\": {\"card_name\": \"Masters\", \"col\": 12}}, {\"id\": \"cb-operations\", \"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 12}}, {\"id\": \"cb-settings\", \"type\": \"card\", \"data\": {\"card_name\": \"Settings\", \"col\": 12}}, {\"id\": \"cb-reports\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports & Insights\", \"col\": 12}}]",
  "shortcuts": [
-  {
-   "docstatus": 0,
-   "icon": "fa fa-store",
-   "label": "Restaurants",
-   "link_to": "Restaurant",
-   "type": "DocType"
-  },
-  {
-   "docstatus": 0,
-   "icon": "fa fa-shopping-bag",
-   "label": "Orders",
-   "link_to": "Food Order",
-   "type": "DocType"
-  },
-  {
-   "docstatus": 0,
-   "icon": "fa fa-motorcycle",
-   "label": "Delivery Agents",
-   "link_to": "Delivery Agent",
-   "type": "DocType"
-  }
+  {"color": "Blue", "format": "{} Restaurants", "label": "Active Restaurants", "link_to": "Restaurant", "stats_filter": "{\"status\": \"Active\"}", "type": "DocType"},
+  {"color": "Orange", "format": "{} Orders", "label": "Pending Orders", "link_to": "Food Order", "stats_filter": "{\"status\": \"Pending\"}", "type": "DocType"},
+  {"color": "Green", "format": "{} Orders", "label": "Orders Out for Delivery", "link_to": "Food Order", "stats_filter": "{\"status\": \"Out for Delivery\"}", "type": "DocType"},
+  {"color": "Purple", "format": "{} Agents", "label": "Active Delivery Agents", "link_to": "Delivery Agent", "stats_filter": "{\"status\": \"Active\"}", "type": "DocType"},
+  {"color": "Red", "format": "{} Orders", "label": "Cancelled Orders", "link_to": "Food Order", "stats_filter": "{\"status\": \"Cancelled\"}", "type": "DocType"},
+  {"color": "Teal", "format": "{} Transactions", "label": "Pending Payments", "link_to": "Payment Transaction", "stats_filter": "{\"status\": \"Pending\"}", "type": "DocType"},
+  {"color": "Cyan", "format": "{} Coupons", "label": "Active Coupons", "link_to": "Coupon Code", "stats_filter": "{\"status\": \"Active\"}", "type": "DocType"},
+  {"color": "Blue", "label": "Daily Revenue", "link_to": "Payment Transaction", "type": "DocType"}
  ],
  "links": [
-  {
-   "docstatus": 0,
-   "label": "Masters",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Restaurant",
-   "link_to": "Restaurant",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Menu Category",
-   "link_to": "Menu Category",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Menu Item",
-   "link_to": "Menu Item",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Delivery Zone",
-   "link_to": "Delivery Zone",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "docstatus": 0,
-   "label": "Operations",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Food Order",
-   "link_to": "Food Order",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Delivery Agent",
-   "link_to": "Delivery Agent",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Payment Transaction",
-   "link_to": "Payment Transaction",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "docstatus": 0,
-   "label": "Settings",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Coupon Code",
-   "link_to": "Coupon Code",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Customer Address",
-   "link_to": "Customer Address",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Restaurant Review",
-   "link_to": "Restaurant Review",
-   "link_type": "DocType",
-   "type": "Link"
-  },
-  {
-   "docstatus": 0,
-   "label": "Reports & Insights",
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Daily Order Summary",
-   "link_to": "Daily Order Summary",
-   "link_type": "Report",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Restaurant Performance",
-   "link_to": "Restaurant Performance",
-   "link_type": "Report",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Delivery Agent Report",
-   "link_to": "Delivery Agent Report",
-   "link_type": "Report",
-   "type": "Link"
-  },
-  {
-   "dependencies": "",
-   "docstatus": 0,
-   "label": "Dashboard",
-   "link_to": "food-delivery-dashboard",
-   "link_type": "Page",
-   "type": "Link"
-  }
+  {"hidden": 0, "idx": 1, "is_query_report": 0, "label": "Masters", "link_count": 0, "onboard": 1, "title": "Masters", "type": "Card Break"},
+  {"dependencies": "", "hidden": 0, "idx": 2, "is_query_report": 0, "label": "Restaurant", "link_count": 0, "link_to": "Restaurant", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 3, "is_query_report": 0, "label": "Menu Category", "link_count": 0, "link_to": "Menu Category", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 4, "is_query_report": 0, "label": "Menu Item", "link_count": 0, "link_to": "Menu Item", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 5, "is_query_report": 0, "label": "Delivery Zone", "link_count": 0, "link_to": "Delivery Zone", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "idx": 6, "is_query_report": 0, "label": "Operations", "link_count": 0, "onboard": 1, "title": "Operations", "type": "Card Break"},
+  {"dependencies": "", "hidden": 0, "idx": 7, "is_query_report": 0, "label": "Food Order", "link_count": 0, "link_to": "Food Order", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 8, "is_query_report": 0, "label": "Delivery Agent", "link_count": 0, "link_to": "Delivery Agent", "link_type": "DocType", "onboard": 1, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 9, "is_query_report": 0, "label": "Payment Transaction", "link_count": 0, "link_to": "Payment Transaction", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "idx": 10, "is_query_report": 0, "label": "Settings", "link_count": 0, "onboard": 0, "title": "Settings", "type": "Card Break"},
+  {"dependencies": "", "hidden": 0, "idx": 11, "is_query_report": 0, "label": "Coupon Code", "link_count": 0, "link_to": "Coupon Code", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 12, "is_query_report": 0, "label": "Customer Address", "link_count": 0, "link_to": "Customer Address", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 13, "is_query_report": 0, "label": "Restaurant Review", "link_count": 0, "link_to": "Restaurant Review", "link_type": "DocType", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "idx": 14, "is_query_report": 0, "label": "Reports & Insights", "link_count": 0, "onboard": 0, "title": "Reports & Insights", "type": "Card Break"},
+  {"dependencies": "", "hidden": 0, "idx": 15, "is_query_report": 1, "label": "Daily Order Summary", "link_count": 0, "link_to": "Daily Order Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 16, "is_query_report": 1, "label": "Restaurant Performance", "link_count": 0, "link_to": "Restaurant Performance", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 17, "is_query_report": 1, "label": "Delivery Agent Report", "link_count": 0, "link_to": "Delivery Agent Report", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"dependencies": "", "hidden": 0, "idx": 18, "is_query_report": 0, "label": "Dashboard", "link_count": 0, "link_to": "food-delivery-dashboard", "link_type": "Page", "onboard": 0, "type": "Link"}
  ]
 }
