@@ -3,8 +3,32 @@ app_title = "Food Delivery"
 app_publisher = "Your Company"
 app_description = "Food Delivery Application like Swiggy"
 app_email = "admin@yourcompany.com"
-app_license = "MIT"
-app_version = "1.0.0"
+app_license = "mit"
+
+# Apps
+required_apps = ["frappe"]
+
+# Fixtures
+fixtures = [
+    {"dt": "Custom Field", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Property Setter", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Workspace", "filters": [["name", "=", "Food Delivery"]]},
+    {"dt": "Workflow", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Workflow State", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Workflow Action Master", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Print Format", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Report", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Client Script", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Server Script", "filters": [["module", "=", "Food Delivery"]]},
+    {"dt": "Role"},
+    {"dt": "Notification", "filters": [["module", "=", "Food Delivery"]]}
+]
+
+# Portal Menu
+standard_portal_menu_items = [
+    {"title": "Order Tracking", "route": "/food_portal/order_tracking", "role": "All"},
+    {"title": "My Orders", "route": "/food_portal/my_orders", "role": "Customer"},
+]
 
 # Include JS and CSS files in header of desk.html
 app_include_css = [
@@ -21,15 +45,6 @@ web_include_css = [
 ]
 web_include_js = [
     "/assets/food_delivery/js/web_food_delivery.js"
-]
-
-# Fixtures
-fixtures = [
-    "Food Delivery Settings",
-    {
-        "dt": "Custom Field",
-        "filters": [["module", "=", "Food Delivery"]]
-    }
 ]
 
 # Document Events
@@ -50,15 +65,20 @@ scheduler_events = {
         "*/5 * * * *": [
             "food_delivery.food_delivery.doctype.food_order.food_order.update_order_status",
         ],
-        "0 0 * * *": [
-            "food_delivery.food_delivery.doctype.restaurant.restaurant.reset_daily_stats",
-        ],
     },
     "daily": [
         "food_delivery.food_delivery.doctype.coupon_code.coupon_code.expire_coupons",
+        "food_delivery.food_delivery.doctype.restaurant.restaurant.reset_daily_stats",
+        "food_delivery.food_delivery.doctype.food_order.food_order.send_daily_order_summary",
     ],
     "hourly": [
         "food_delivery.food_delivery.doctype.delivery_agent.delivery_agent.update_agent_status",
+    ],
+    "weekly": [
+        "food_delivery.food_delivery.doctype.delivery_agent.delivery_agent.generate_agent_performance_report",
+    ],
+    "monthly": [
+        "food_delivery.food_delivery.doctype.payment_transaction.payment_transaction.generate_monthly_revenue_report",
     ]
 }
 
