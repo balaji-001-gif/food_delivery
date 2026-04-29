@@ -65,10 +65,10 @@ def create_restaurants():
             "preparation_time": 30,
             "delivery_time": 25,
             "menu": [
-                {"category": "Pizza", "item_name": "Margherita", "rate": 199, "is_veg": 1},
-                {"category": "Pizza", "item_name": "Pepperoni Feast", "rate": 399, "is_veg": 0},
-                {"category": "Sides", "item_name": "Garlic Bread", "rate": 99, "is_veg": 1},
-                {"category": "Beverages", "item_name": "Coke 330ml", "rate": 40, "is_veg": 1}
+                {"category": "Pizza Palace Pizza", "item_name": "Margherita", "rate": 199, "is_veg": 1},
+                {"category": "Pizza Palace Pizza", "item_name": "Pepperoni Feast", "rate": 399, "is_veg": 0},
+                {"category": "Pizza Palace Sides", "item_name": "Garlic Bread", "rate": 99, "is_veg": 1},
+                {"category": "Pizza Palace Beverages", "item_name": "Coke 330ml", "rate": 40, "is_veg": 1}
             ]
         },
         {
@@ -91,11 +91,12 @@ def create_restaurants():
             "preparation_time": 15,
             "delivery_time": 20,
             "menu": [
-                {"category": "Burgers", "item_name": "Classic Veggie Burger", "rate": 120, "is_veg": 1},
-                {"category": "Burgers", "item_name": "Double Cheese Chicken Burger", "rate": 250, "is_veg": 0},
-                {"category": "Sides", "item_name": "Peri Peri Fries", "rate": 80, "is_veg": 1}
+                {"category": "Burger Barn Burgers", "item_name": "Classic Veggie Burger", "rate": 120, "is_veg": 1},
+                {"category": "Burger Barn Burgers", "item_name": "Double Cheese Chicken Burger", "rate": 250, "is_veg": 0},
+                {"category": "Burger Barn Sides", "item_name": "Peri Peri Fries", "rate": 80, "is_veg": 1}
             ]
         }
+
     ]
     
     for r_data in restaurants:
