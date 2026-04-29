@@ -29,3 +29,8 @@ def generate_monthly_revenue_report():
     """Generate monthly revenue report (Scheduled Task placeholder)"""
     pass
 
+
+def on_submit(doc, method=None):
+    pass
+
+

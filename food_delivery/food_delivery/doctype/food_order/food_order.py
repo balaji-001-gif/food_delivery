@@ -379,3 +379,16 @@ def send_daily_order_summary():
     """Send daily order summary (Scheduled Task placeholder)"""
     pass
 
+
+def after_insert(doc, method=None):
+    pass
+
+
+def on_submit(doc, method=None):
+    pass
+
+
+def on_cancel(doc, method=None):
+    pass
+
+
